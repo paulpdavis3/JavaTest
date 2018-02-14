@@ -1,5 +1,10 @@
 package ie.dit;
 
+import java.io.IOException;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.io.BufferedReader;
+
 public class Tune
 {
 	private int x;
@@ -11,4 +16,14 @@ public class Tune
 	{
 		return x;
 	}
+	
+	public String toString()
+    {
+        StringBuffer sb = new StringBuffer();
+        for(String word:words)
+        {
+            sb.append(word + ", \n");
+        }
+
+        return sb.toString();
 }
