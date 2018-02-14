@@ -25,9 +25,17 @@ public class Tune
         StringBuffer sb = new StringBuffer();
         for(String word:words)
         {
+			String number;
+			String ww;
+			
 			if(word.contains("X:"))
 			{
-				sb.append(word + ", \n");
+				number = word.substring(1,1); //gets the number of the tune
+			}
+			if(word.contains("T:"))
+			{
+				ww = word.substring(2);
+				sb.append(number + ", " + ww); //appends the number then a comma and then the title of the tune
 			}
         }
 
